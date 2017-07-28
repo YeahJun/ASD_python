@@ -201,7 +201,7 @@ def login_view(*args,**kwargs):
 
 	:Return: 실제 승인 토큰을 수신하는 데 사용되는 임시 키.
 	"""
-def oauth_confirm(*args, **kwargs):
+def oauth_confirm(*args,**kwargs):
 	"""
 	인증 토큰을 반환한다. 이 method는 사용자가 백엔드에서 사용자의 인증을 완료할 수 있도록 모바일 운영자 웹 사이트에 성공적으로 인증된 후 호출되어야 한다.
 	
@@ -233,7 +233,7 @@ def oauth_confirm(*args, **kwargs):
 
 	:Error 503: 셀룰러 연산자 서비스를 사용할 수 없다.
 	"""
-def oauth_url(*args, **kwargs):
+def oauth_url(*args,**kwargs):
 	"""Megafon 서버의 인증 URL을 반환한다.
 
 
@@ -294,7 +294,7 @@ def oauth_confirm(*args,**kwargs):
 
 	:Error 503: 서비스를 사용할 수 없다.
 	"""
-def oauth_confirm(*args, **kwargs):
+def oauth_confirm(*args,**kwargs):
 	"""구글 서버에 인증 URL을 반환한다.
 
 	:Class: GoogleAuth(name,service_name,client_id,client_secret,access_token_url,authorize_url,base_url,messages=None,callback_url=None,**kwargs):oauth_url(*args,**kwargs)
