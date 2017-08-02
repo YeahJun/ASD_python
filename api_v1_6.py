@@ -13,7 +13,7 @@ def list_timeline(request,*args,**kwargs):
 	:Method: GET
 
 
-	:Header: Mountbit:Auth: 사용자 인증 토큰.
+	:Header MountbitAuth: 사용자 인증 토큰.
 
 
 	:param path: 사용되지 않음. (reserved, not used)

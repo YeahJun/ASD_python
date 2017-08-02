@@ -67,10 +67,7 @@ def shares_create_extra(request,*args,**kwargs):
 	:Method: POST
 
 
-	:Method: Headers
-
-
-	:Method: MountbitAuth: 권한이 있는 사용자의 토큰. 공유된 폴더가 공용이면, 이 매개 변수는 선택 사항이다.
+	:Headers MountbitAuth: 권한이 있는 사용자의 토큰. 공유된 폴더가 공용이면, 이 매개 변수는 선택 사항이다.
 
 
 	:param invite_hash: 필수 사항. 공유 폴더에 사용자를 초대하는 고유한 해시. 해시 결과는 method /folders/shared/add/에서 얻음.

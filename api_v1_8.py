@@ -322,7 +322,8 @@ def oauth_confirm(*args,**kwargs):
 def create_view(*args,**kwargs):
 	"""해시 함수와 로그인 상태를 알고 있는 경우 언제든지 값을 생성할 수 있는 영구 인증 토큰을 수신하는데 사용한다. 이 로그인 method를 사용하여 인증 정보를 생성하고 관련된 영구 토큰은 반환한다. 이 토큰은 method /accounts /permanent_tokens /에서 반환되는 영구 토큰이 아니며, 삭제할 수 있는 유일한 방법은 관련 자격 증명을 삭제하는 것이다. 각 사용자는 이 플러그인 안에서 제공하는 자격 증명을 하나만 가질 수 있다. 이 method를 호출하면 기존 인증 정보가 새 인증서와 함께 인증 토큰과 함께 교환된다.
 	:Class: BasicAuth(name,**kwargs)
-	:Headers: Mountbit:Auth - 권한 부여 토큰.
+
+	:Headers MountbitAuth: 권한 부여 토큰.
 
 
 	:URL: https://api.server.com/api/1/accounts/create_basic_auth/
@@ -348,7 +349,8 @@ def create_view(*args,**kwargs):
 def get_view(*args,**kwargs):
 	"""기본 승인을 위해 (로그인 및 암호를 사용하여) 로그인 및 암호를 반환한다.
 	:Class: BasicAuth(name,**kwargs)
-	:Headers: Mountbit:Auth - 권한 부여 토큰.
+
+	:Headers MountbitAuth: 권한 부여 토큰.
 
 
 	:URL: https://api.server.com/api/1/accounts/get_basic_auth/
@@ -744,7 +746,7 @@ def accounts_remove_login(request,*args,*kwargs):
 	:Method: POST
 
 
-	:Headers : Mountbit:Auth - 권한 부여 토큰.
+	:Headers MountbitAuth: 권한 부여 토큰.
 
 
 	:param login: 삭제할 로그인.

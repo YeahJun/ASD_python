@@ -111,7 +111,7 @@ def company_change(request,*args,**kwargs):
 	:param domain: 회사 도메인
 
 
-	:param logo_url : 로고 URL
+	:param logo_url: 로고 URL
 
 
 	:param ldap_is_enabled: LDAP 가 사용 가능 여부
@@ -468,14 +468,13 @@ def company_folder_hide(request,*args,**kwargs):
 	:Method: 없음.
 
 
-	:param: 아래 중 하나
-
-
 	:param folder_hash: 폴더 공개 해시
 
 
 	:param path: 폴더 경로
 
+
+	:param: foler_hash나 path 둘 중 하나나
 
 	:Return: 없음.
 
@@ -550,7 +549,7 @@ def company_folders_get_one(request,*args,**kwargs):
 	:param folder_hash: 다른 사람들과 공유하기 위한 폴더의 해시 값
 
 
-	:Return 맵의 리스트 :
+	:Return: 맵의 리스트 :
 
 
 	:Return owner_id: 소유주의 ID 공유

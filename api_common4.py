@@ -153,5 +153,5 @@ def make_complaint(request,*args,**kwargs):
 	:Error 404: 불만 사항을 찾을 수 없다.
 
 
-	:Return JSON 형식으로 생성된 불만 사항.
+	:Return: JSON 형식으로 생성된 불만 사항.
 	"""

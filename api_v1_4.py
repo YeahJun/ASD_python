@@ -118,7 +118,7 @@ def trash_shared_content(request,*args,**kwargs):
 	:Error 404: 휴지통 또는 그 안에 있는 객체를 찾을 수 없다. 예를 들어, 요청이 수행되는 동안에 삭제되어 버린 경우.
 
 
-	:Error 400 : 폴더 (공유된 접근)가 더 이상 이 사용자에게 속하지 않는다
+	:Error 400: 폴더 (공유된 접근)가 더 이상 이 사용자에게 속하지 않는다
 
 """
 def trash_shared_restore(request,*args,**kwargs):

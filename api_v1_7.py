@@ -19,13 +19,13 @@ def shares_get(request,*args,**kwargs):
 	:param 가능한 값:
 
 
-	:param  my: 소유자의 폴더만 반환.
+	:param my: 소유자의 폴더만 반환.
 
 
-	:param  others: 다른 사용자가 공유하는 폴더를 본인의 공동 작업으로 반환.
+	:param others: 다른 사용자가 공유하는 폴더를 본인의 공동 작업으로 반환.
 
 
-	:param  company: 사용자의 회사에서 공유 및 공개된 폴더를 반환.
+	:param company: 사용자의 회사에서 공유 및 공개된 폴더를 반환.
 
 
 	:param 기본적으로, method는 공유된 모든 형식들을 반환한다.
