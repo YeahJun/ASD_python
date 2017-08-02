@@ -107,7 +107,7 @@ def admin_accounts_find_users(request,*args,**kwargs):
 	:param user_id: 선택 사항. 찾고자 하는 사용자의 아이디
 
 
-	:param registration_date_from 과registration_date_to: 선택 사항. 사용자 등록에 대한 기간. 매개변수가 주어지면, 이 메소드는 이 기간 안에 등록한 사용자들을 반환한다. 매개변수는 다같이 또는 하나씩 전송이 될 수 있다. 
+	:param registration_date_from(==registration_date_to): 선택 사항. 사용자 등록에 대한 기간. 매개변수가 주어지면, 이 메소드는 이 기간 안에 등록한 사용자들을 반환한다. 매개변수는 다같이 또는 하나씩 전송이 될 수 있다.
 
 
 	:param login: 선택 사항. 사용자 로그인
@@ -116,10 +116,10 @@ def admin_accounts_find_users(request,*args,**kwargs):
 	:param name: 선택 사항. 사용자 이름.
 
 
-	:param last_login_from and last_login_to: 선택 사항. 사용자가 검색되는 기간. 매개변수는 하나씩 또는 다같이 보내질 수 있다. 
+	:param last_login_from(==last_login_to): 선택 사항. 사용자가 검색되는 기간. 매개변수는 하나씩 또는 다같이 보내질 수 있다.
 
 
-	:param storage_size_from and storage_size_to: 선택 사항. 사용자가 검색되는 저장영역의 크기. 매개변수는 하나씩 또는 다같이 보내질 수 있다. 
+	:param storage_size_from(==storage_size_to): 선택 사항. 사용자가 검색되는 저장영역의 크기. 매개변수는 하나씩 또는 다같이 보내질 수 있다.
 
 
 	:param is_active: 선택 사항. 활성 / 비활성 사용자. 
@@ -662,10 +662,10 @@ def get_result(request,*args,**kwargs):
 	:param task_id: 필수 사항. 백그라운드 작업의 ID 
 
 
-	:Return :실행 종료 시 사전에 추가 된 임의의 json 딕셔너리.
+	:Return: 실행 종료 시 사전에 추가 된 임의의 json 딕셔너리.
 
 
-	:Error 404 : 작업을 찾을 수 없다
+	:Error 404: 작업을 찾을 수 없다
 
 
 	:Error 400: 작업을 실행하는 중에 에러가 발생함
@@ -869,10 +869,7 @@ def shares_create_extra(request,*args,**kwargs):
 	:Method: POST 
 
 
-	:Method: Header
-
-
-	:Method: 사용자 인증 토큰. 공유된 폴더가 공개되어 있으면, 이 매개 변수는 선택 사항이다.
+	:Header MountbitAuth: 사용자 인증 토큰. 공유된 폴더가 공개되어 있으면, 이 매개 변수는 선택 사항이다.
 
 
 	:param invite_hash: 필수 사항. 공유 폴더에 사용자를 초대하기 위한 고유한 해시. method /folders/shared/add/ 로부터의 해시 결과. 
@@ -912,7 +909,7 @@ def get_set_key(request,*args,**kwargs):
 	:Return: GET 요청에 대한 키 값
 
 
-	:Error 404 : 키를 찾을 수 없다
+	:Error 404: 키를 찾을 수 없다
 
 	"""
 def get_storage():
@@ -984,7 +981,7 @@ def get_updates(request,*args,**kwargs):
 	:param platform: 필수 사항. 플랫폼 타입 (Windows or Mac).
 
 
-	:Return 주어진 플랫폼에 따라 현재 가능한 업데이트를 설명한다.
+	:Return: 주어진 플랫폼에 따라 현재 가능한 업데이트를 설명한다.
 	"""
 def get_version(request,*args,**kwargs):
 	"""특정 플랫폼에 대한 현재 클라이언트 앱 버전을 반환한다.
@@ -1184,13 +1181,13 @@ def company_folder_hide(request,*args,**kwargs):
 	:URL: https://api.server.com/api/1/shares/company/hide/
 
 
-	:param: 둘 중 선택
-
-
 	:param folder_hash: 폴더 공개 해시
 
 
 	:param path: 폴더경로
+
+
+	:param: folder_hash나 path 둘 중 선택
 
 
 	:Return: 없음
@@ -1329,7 +1326,7 @@ def company_get_shares(request,*args,**kwargs):
 	:Return owner_name: 공유 또는 연결 소유 이름
 
 
-	:Return shared_outside : 게시된 폴더에 대해 공동 작업자 또는 소유자가 회사 소속이 아니면 플래그가 True 로 설정 된다. 링크는 항상 True이다.
+	:Return shared_outside: 게시된 폴더에 대해 공동 작업자 또는 소유자가 회사 소속이 아니면 플래그가 True 로 설정 된다. 링크는 항상 True이다.
 
 
 	:Return src_path: 파일이나 폴더의 경로
@@ -3452,10 +3449,7 @@ def accounts_remove_login(request,*args,**kwargs):
 	:Method: POST
 
 
-	:Method: Headers
-
-
-	:Method: Mountbit:Auth: authorization 토큰.
+	:Headers MountbitAuth: authorization 토큰.
 
 
 	:param login: 삭제될 로그인.
@@ -3573,7 +3567,7 @@ def company_change(request,*args,**kwargs):
 	:param domain: 회사 도메인.
 
 
-	:param logo_url : 로고 URL.
+	:param logo_url: 로고 URL.
 
 
 	:param ldap_is_enabled: LDAP 활성화 여부 (true | false)
@@ -3606,7 +3600,7 @@ def company_change(request,*args,**kwargs):
 	:param notification_email: 주(state) 회사에 대한 알림을 위한 이메일.
 
 
-	:Return: 공용 회사 정보, please see accounts/company/<id>/ API method.
+	:Return: 공용 회사 정보, accounts/company/<id>/ API method로 확인가능.
 
 
 	:Error 403: 사용자가 회사의 설정을 바꿀 수 있는 권한이 없다.
@@ -3625,13 +3619,13 @@ def company_change_users_quota(request,*args,**kwargs):
 	:Method: POST
 
 
-	:param company_id: 필수, URL 문자열로부터 가져온 회사 ID
+	:param company_id: 필수 사항, URL 문자열로부터 가져온 회사 ID
 
 
-	:param users_id: 필수, 사용자 ID 목록
+	:param users_id: 필수 사항, 사용자 ID 목록
 
 
-	:param quota_size: 필수, 사용자들에 대한 할당량
+	:param quota_size: 필수 사항, 사용자들에 대한 할당량
 
 
 	:Return: 에러 정보와 성공과 실패에 대한 정보를 가진 사용자들의 공용 정보
@@ -3653,7 +3647,7 @@ def company_claer_logo(request,*args,**kwargs):
 	:param company_id: 필수 사항. URL 문자열로부터 가져온 회사 ID
 
 
-	:Return: 응답 데이터 없음.
+	:Return: 없음.
 
 
 	:Error 404: 주어진 ID로 회사를 찾을 수 없다.
@@ -3948,7 +3942,7 @@ def company_users(request,*args,**kwargs):
 	:param company_id: URL 문자열로부터 가져온 회사 ID
 
 
-	:Return :회사 노동자들의 목록, 각 레코드는
+	:Return: 회사 노동자들의 목록, 각 레코드는
 
 
 	:Return userid: 노동자 ID
