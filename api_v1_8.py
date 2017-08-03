@@ -348,7 +348,10 @@ def create_view(*args,**kwargs):
 	"""
 def get_view(*args,**kwargs):
 	"""기본 승인을 위해 (로그인 및 암호를 사용하여) 로그인 및 암호를 반환한다.
+
+
 	:Class: BasicAuth(name,**kwargs)
+
 
 	:Headers MountbitAuth: 권한 부여 토큰.
 

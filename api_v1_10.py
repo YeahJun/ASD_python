@@ -46,7 +46,7 @@ def company_get(request,*args,**kwargs):
 	:Return registration_date: 회사 등록 날짜.
 
 
-	:Return 회사 관리자 대상으로 모든 사용자들의 데이터를 보여준다.
+	:Return: 회사 관리자 대상으로 모든 사용자들의 데이터를 보여준다.
 
 
 	:Return ldap_is_enabled: LDAP 가 사용 가능 여부.

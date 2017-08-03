@@ -28,7 +28,7 @@ def shares_get(request,*args,**kwargs):
 	:param company: 사용자의 회사에서 공유 및 공개된 폴더를 반환.
 
 
-	:param 기본적으로, method는 공유된 모든 형식들을 반환한다.
+	:param: 기본적으로, method는 공유된 모든 형식들을 반환한다.
 
 
 	:Return 200: 각 폴더를 위한 메타데이터 목록

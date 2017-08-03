@@ -22,7 +22,7 @@ def list_albums(request,*args,**kwargs):
 	:param limit: 반환되는 앨범의 수 (최대 2000).
 
 
-	:Return 사용자 앨범 리스트.
+	:Return: 사용자 앨범 리스트.
 	"""
 def create_album(request,*args,**kwargs):
 	"""새로운 앨범을 생성한다.
